@@ -1,0 +1,18 @@
+
+name: Student Greeting Action
+description: Creates a personalized greeting for a student
+
+inputs:
+  student-name:
+    description: Name of the student
+    required: true
+    default: Student
+
+outputs:
+  greeting:
+    description: The generated greeting
+    value: ${{ steps.greet.outputs.message }}
+
+runs:
+  using: node20
+  main: dist/index.js
